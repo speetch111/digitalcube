@@ -9,11 +9,21 @@
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700;800&display=swap" rel="stylesheet">
   <title>Главная</title>
   <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/jquery.fancybox.min.css">
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/responsive.css">
 </head>
 
 <body>
+
+  <!-- sprite svg -->
+  <svg display="none" xmlns="http://www.w3.org/2000/svg">
+    <symbol id="play" viewBox="0 0 28 32">
+      <path
+        d="M27 14.2679C28.3333 15.0377 28.3333 16.9622 27 17.732L3 31.5885C1.66667 32.3583 -1.54721e-06 31.396 -1.47991e-06 29.8564L-2.68545e-07 2.14359C-2.01247e-07 0.603992 1.66667 -0.35826 3 0.411541L27 14.2679Z" />
+    </symbol>
+  </svg>
+  <!-- sprite svg -->
 
   <!-- header start -->
   <header class="header">
@@ -81,354 +91,532 @@
   </header>
   <!-- header end -->
 
-  <!-- intro start -->
-  <section class="intro">
-    <div class="intro__video-wrap">
+  <main>
+    <!-- intro start -->
+    <section class="intro">
+      <div class="intro__video-wrap">
 
-      <div class="intro__video">
-        <div class="mask"></div>
-        <video class="intro__media" src="images/video.mp4" autoplay muted loop></video>
+        <div class="intro__video">
+          <div class="mask"></div>
+          <video class="intro__media" src="images/video.mp4" autoplay muted loop></video>
+        </div>
+
+        <div class="intro__text">
+          <h1 class="intro__title">
+            Заголовок на баннере
+          </h1>
+          <div class="intro__btn">
+            <button class="btn">
+              Оставить заявку
+            </button>
+          </div>
+        </div>
+
       </div>
+    </section>
+    <!-- intro end -->
 
-      <div class="intro__text">
-        <h1 class="intro__title">
-          Заголовок на баннере
-        </h1>
-        <div class="intro__btn">
-          <button class="btn">
-            Оставить заявку
-          </button>
+    <!-- tasks start -->
+    <section class="tasks">
+      <div class="container">
+        <h2 class="section__title center tasks__title">
+          <span>Задачи, которые решает</span> <span>Фото и видео контент</span>
+        </h2>
+        <div class="tasks__inner">
+          <div class="tasks__item-wrap">
+            <div class="tasks__item">
+              <div class="tasks__item-img">
+                <img src="images/task-img-1.svg" alt="">
+              </div>
+              <h3 class="tasks__item-title">
+                Визуальная составляющая бизнеса
+              </h3>
+              <p class="tasks__item-text">
+                Люди охотнее покупают то, что выглядит качественно. Поэтому продвигать бизнес в интернете, не имея
+                профессиональных фото и видео — это пустая трата времени.
+              </p>
+            </div>
+          </div>
+          <div class="tasks__item-wrap">
+            <div class="tasks__item">
+              <div class="tasks__item-img">
+                <img src="images/task-img-2.svg" alt="">
+              </div>
+              <h3 class="tasks__item-title">
+                Возможность ознакомиться с продуктом
+              </h3>
+              <p class="tasks__item-text">
+                Только с помощью качественных фото и видео можно показать товар максимально выгодно и при этом правдиво.
+                С
+                точностью передать его размеры и цвет, сделать акцент на деталях, выделить сильные стороны.
+              </p>
+            </div>
+          </div>
+          <div class="tasks__item-wrap">
+            <div class="tasks__item">
+              <div class="tasks__item-img">
+                <img src="images/task-img-3.svg" alt="">
+              </div>
+              <h3 class="tasks__item-title">
+                Увеличение продаж
+              </h3>
+              <p class="tasks__item-text">
+                Профессиональные фото и видео вызывают доверие у клиентов и, как следствие,стимулируют продажи.
+              </p>
+            </div>
+          </div>
         </div>
       </div>
+    </section>
+    <!-- tasks end -->
 
+    <!-- photos start -->
+    <section class="photos">
+      <div class="container">
+        <h2 class="section__title photos__title">
+          <span>
+            Фотопродакшн
+          </span>
+        </h2>
+
+        <div class="photos__row-wrapper">
+
+          <div class="photos__row">
+
+            <div class="photos__content">
+              <h3 class="photos__content-title">
+                МЫ СОЗДАЕМ <br>
+                <span>
+                  РЕКЛАМНЫЕ ФОТОСЪЕМКИ
+                </span>
+              </h3>
+              <p class="photos__content-text">
+                Главная задача рекламной фотографии — вызвать непреодолимое желание купить ваш товар/услугу. Наши
+                фотографы знают, как этого добиться.
+              </p>
+            </div>
+
+            <div class="photos__gallery">
+              <div class="photos__gallery-min">
+                <div class="photos__gallery-item h50">
+                  <img src="images/sec-photo-1.jpg" alt="">
+                </div>
+                <div class="photos__gallery-item h50">
+                  <img src="images/sec-photo-2.jpg" alt="">
+                </div>
+              </div>
+              <div class="photos__gallery-max">
+                <div class="photos__gallery-item">
+                  <img src="images/sec-photo-3.jpg" alt="">
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+
+        <div class="photos__row-wrapper">
+
+          <div class="photos__row reverse">
+
+            <div class="photos__content">
+              <h3 class="photos__content-title">
+                <span>ИМИДЖЕВАЯ СЪЕМКА</span> <br>
+                ДЛЯ ВАШЕГО БРЕНДА
+              </h3>
+              <p class="photos__content-text">
+                Это визитная карточка вашего бренда. Имиджевые фотографии демонстрирует ваш стиль, вашу целостность,
+                ваше
+                чувство вкуса и вашу индивидуальность.
+              </p>
+            </div>
+
+            <div class="photos__gallery">
+              <div class="photos__gallery-min">
+                <div class="photos__gallery-item">
+                  <img src="images/sec-photo-4.jpg" alt="">
+                </div>
+              </div>
+              <div class="photos__gallery-max">
+                <div class="photos__gallery-item">
+                  <img src="images/sec-photo-5.jpg" alt="">
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+
+        <div class="photos__row-wrapper">
+
+          <div class="photos__row">
+
+            <div class="photos__content">
+              <h3 class="photos__content-title">
+                ФОТОГРАФИИ <br>
+                ДЛЯ <span>ИНТЕРНЕТ-МАГАЗИНА</span> <br> ИЛИ <span>КАТАЛОГА </span>
+              </h3>
+              <p class="photos__content-text">
+                Главная задача рекламной фотографии — вызвать непреодолимое желание купить ваш товар/услугу. Наши
+                фотографы знают, как этого добиться.
+              </p>
+            </div>
+
+            <div class="photos__gallery">
+              <div class="photos__gallery-min">
+                <div class="photos__gallery-item h50">
+                  <img src="images/sec-photo-6.jpg" alt="">
+                </div>
+                <div class="photos__gallery-item h50">
+                  <img src="images/sec-photo-7.jpg" alt="">
+                </div>
+              </div>
+              <div class="photos__gallery-max">
+                <div class="photos__gallery-item">
+                  <img src="images/sec-photo-8.jpg" alt="">
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+
+        <div class="photos__row-wrapper">
+
+          <div class="photos__row reverse">
+
+            <div class="photos__content">
+              <h3 class="photos__content-title">
+                <span>FOOD-СЪЕМКА</span> <br> ДЛЯ ВАШЕГО ЗАВЕДЕНИЯ
+              </h3>
+              <p class="photos__content-text">
+                Блюда вашего кафе/ресторана должны пробуждать аппетит не только вживую, но и на экране смартфона.Без
+                профессиональной фотографии это невозможно реализовать.
+              </p>
+            </div>
+
+            <div class="photos__gallery">
+              <div class="photos__gallery-min">
+                <div class="photos__gallery-item">
+                  <img src="images/sec-photo-9.jpg" alt="">
+                </div>
+              </div>
+              <div class="photos__gallery-max">
+                <div class="photos__gallery-item">
+                  <img src="images/sec-photo-10.jpg" alt="">
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+
+        <div class="photos__row-wrapper">
+
+          <div class="photos__row">
+
+            <div class="photos__content">
+              <h3 class="photos__content-title">
+                МЫ ДЕЛАЕМ <br> <span>ИНТЕРЬЕРНЫЕ ФОТОСЪЕМКИ</span>
+              </h3>
+              <p class="photos__content-text">
+                Если потенциальный клиент, глядя на фото вашего интерьера, захотел оказаться внутри — это победа. И
+                чтобы
+                она состоялась, необходимо снять его правдоподобно и привлекательно.
+              </p>
+            </div>
+
+            <div class="photos__gallery">
+              <div class="photos__gallery-min">
+                <div class="photos__gallery-item h50">
+                  <img src="images/sec-photo-11.jpg" alt="">
+                </div>
+                <div class="photos__gallery-item h50">
+                  <img src="images/sec-photo-12.jpg" alt="">
+                </div>
+              </div>
+              <div class="photos__gallery-max">
+                <div class="photos__gallery-item">
+                  <img src="images/sec-photo-13.jpg" alt="">
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+
+        <div class="photos__row-wrapper">
+
+          <div class="photos__row reverse">
+
+            <div class="photos__content">
+              <h3 class="photos__content-title">
+                СОЗДАДИМ ФОТОГРАФИИ <br> <span>ВАШЕГО ПРОИЗВОДСТВА </span>
+              </h3>
+              <p class="photos__content-text">
+                Готовая продукция — это, конечно, классно! Но зачастую важно показать процесс её изготовления:
+                оборудование, этапы производства и мастеров, увлечённых работой.
+              </p>
+            </div>
+
+            <div class="photos__gallery">
+              <div class="photos__gallery-min">
+                <div class="photos__gallery-item">
+                  <img src="images/sec-photo-14.jpg" alt="">
+                </div>
+              </div>
+              <div class="photos__gallery-max">
+                <div class="photos__gallery-item">
+                  <img src="images/sec-photo-15.jpg" alt="">
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+    <!-- photos end -->
+
+    <!-- order start -->
+    <div class="order">
+      <div class="order__container">
+        <h2 class="section__title">
+          <span>Рассчитайте стоимость</span>
+          <span>вашей фотосъемки</span>
+        </h2>
+        <div class="order__btn">
+          <button class="btn">Оставить заявку</button>
+        </div>
+      </div>
     </div>
-  </section>
-  <!-- intro end -->
+    <!-- order end-->
 
-  <!-- tasks start -->
-  <section class="tasks">
+    <!-- ticker text start -->
+    <div class="ticker__text">
+      <div class="ticker-text__row">
+        <div class="ticker-text__list">
+          <div class="ticker-text__content-wrapper">
+            <div class="ticker-text__content">
+              photo & video production
+            </div>
+          </div>
+          <div class="ticker-text__content-wrapper">
+            <div class="ticker-text__content">
+              photo & video production
+            </div>
+          </div>
+          <div class="ticker-text__content-wrapper">
+            <div class="ticker-text__content">
+              photo & video production
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="ticker-text__row right">
+        <div class="ticker-text__list">
+          <div class="ticker-text__content-wrapper">
+            <div class="ticker-text__content">
+              photo & video production
+            </div>
+          </div>
+          <div class="ticker-text__content-wrapper">
+            <div class="ticker-text__content">
+              photo & video production
+            </div>
+          </div>
+          <div class="ticker-text__content-wrapper">
+            <div class="ticker-text__content">
+              photo & video production
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- ticker text end -->
+
+    <!-- video start -->
+    <section class="video">
+      <div class="container">
+        <h2 class="section__title video__titile">
+          <span>Видеопродакшн</span>
+        </h2>
+        <div class="video__inner">
+          <div class="video__content">
+            <div class="video__text">
+              <p>
+                Продвигать бизнес в соц. сетях, не используя видеоконтент — это как со связанными ногами пытаться
+                выиграть
+                в марафоне (все лавры достанутся конкурентам).
+              </p>
+              <p>
+                Вы очень многое недобираете, если у вас до сих пор нет качественного видео. Качественного — значит
+                тщательно продуманного, срежиссированного и снятого на профессиональную технику. Именно такой контент мы
+                вам и предлагаем. Рассказать на видео о компании? Не вопрос. Познакомить аудиторию с сотрудниками?
+                Запросто. Показать преимущества продукции? Без проблем.Мы снимаем видеоролики любого масштаба. От уютной
+                презентации винного бутика до обзора корпоративного фестиваля на несколько тысяч человек.
+              </p>
+            </div>
+            <ul class="video__list">
+              <li class="video__item-wrapper">
+                <div class="video__item">
+                  <div class="video__item-img">
+                    <a data-fancybox href="https://www.youtube.com/watch?v=P4HjJFB_gG4">
+                      <img src="images/video-img-1.jpg" alt="">
+                    </a>
+                    <span class="play--icon">
+                      <svg>
+                        <use href="#play"></use>
+                      </svg>
+                    </span>
+                  </div>
+                  <h4 class="video__item-title">
+                    Горная мыловарня
+                  </h4>
+                </div>
+              </li>
+              <li class="video__item-wrapper">
+                <div class="video__item">
+                  <div class="video__item-img">
+                    <a data-fancybox href="https://www.youtube.com/watch?v=P4HjJFB_gG4">
+                      <img src="images/video-img-2.jpg" alt="">
+                    </a>
+                    <span class="play--icon">
+                      <svg>
+                        <use href="#play"></use>
+                      </svg>
+                    </span>
+                  </div>
+                  <h4 class="video__item-title">
+                    Ресторан кавказской кухни
+                  </h4>
+                </div>
+              </li>
+              <li class="video__item-wrapper">
+                <div class="video__item">
+                  <div class="video__item-img">
+                    <a data-fancybox href="https://www.youtube.com/watch?v=P4HjJFB_gG4">
+                      <img src="images/video-img-3.jpg" alt="">
+                    </a>
+                    <span class="play--icon">
+                      <svg>
+                        <use href="#play"></use>
+                      </svg>
+                    </span>
+                  </div>
+                  <h4 class="video__item-title">
+                    Ресторан La Luna
+                  </h4>
+                </div>
+              </li>
+              <li class="video__item-wrapper">
+                <div class="video__item">
+                  <div class="video__item-img">
+                    <a data-fancybox href="https://www.youtube.com/watch?v=P4HjJFB_gG4">
+                      <img src="images/video-img-4.jpg" alt="">
+                    </a>
+                    <span class="play--icon">
+                      <svg>
+                        <use href="#play"></use>
+                      </svg>
+                    </span>
+                  </div>
+                  <h4 class="video__item-title">
+                    Fetexim Promo
+                  </h4>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div class="video__img">
+            <img src="images/sec-video-img.svg" alt="">
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- video end -->
+
+    <!-- order start -->
+    <div class="order">
+      <div class="order__container">
+        <h2 class="section__title">
+          <span>Рассчитайте стоимость</span>
+          <span>вашей фотосъемки</span>
+        </h2>
+        <div class="order__btn">
+          <button class="btn">Оставить заявку</button>
+        </div>
+      </div>
+    </div>
+    <!-- order end-->
+  </main>
+ 
+  <!-- footer start -->
+  <footer class="footer">
     <div class="container">
-      <h2 class="section__title center tasks__title">
-        <span>Задачи, которые решает</span> <span>Фото и видео контент</span>
-      </h2>
-      <div class="tasks__inner">
-        <div class="tasks__item-wrap">
-          <div class="tasks__item">
-            <div class="tasks__item-img">
-              <img src="images/task-img-1.svg" alt="">
-            </div>
-            <h3 class="tasks__item-title">
-              Визуальная составляющая бизнеса
-            </h3>
-            <p class="tasks__item-text">
-              Люди охотнее покупают то, что выглядит качественно. Поэтому продвигать бизнес в интернете, не имея
-              профессиональных фото и видео — это пустая трата времени.
-            </p>
+      <div class="footer-top">
+        <div class="footer-top__inner">
+          <ul class="footer__contacts">
+            <li>
+              <a class="footer__phone" href="tel:+79035344067">
+                +7(903)534-40-67
+              </a>
+            </li>
+            <li>
+              <a class="footer__email" href="mailto:info@cubedigital.ru">info@cubedigital.ru</a>
+            </li>
+            <li>
+              <address class="footer__address">
+                127299 г. Москва ул. Б. Академическая д. 5с1 каб. 515
+              </address>
+            </li>
+          </ul>
+          <div class="footer__map">
+            <img src="images/map-img.jpg" alt="">
           </div>
         </div>
-        <div class="tasks__item-wrap">
-          <div class="tasks__item">
-            <div class="tasks__item-img">
-              <img src="images/task-img-2.svg" alt="">
-            </div>
-            <h3 class="tasks__item-title">
-              Возможность ознакомиться с продуктом
-            </h3>
-            <p class="tasks__item-text">
-              Только с помощью качественных фото и видео можно показать товар максимально выгодно и при этом правдиво. С
-              точностью передать его размеры и цвет, сделать акцент на деталях, выделить сильные стороны.
-            </p>
+      </div>
+      <div class="footer-bottom">
+        <div class="footer-bottom__inner">
+          <div class="footer__logo">
+            <a href="#!">
+              <img src="images/logo.svg" alt="">
+            </a>
           </div>
-        </div>
-        <div class="tasks__item-wrap">
-          <div class="tasks__item">
-            <div class="tasks__item-img">
-              <img src="images/task-img-3.svg" alt="">
-            </div>
-            <h3 class="tasks__item-title">
-              Увеличение продаж
-            </h3>
-            <p class="tasks__item-text">
-              Профессиональные фото и видео вызывают доверие у клиентов и, как следствие,стимулируют продажи.
-            </p>
+          <div class="footer__privacy">
+            <a href="#!">Политика конфиденциальности</a>
+            <a href="#!">Договор оказания услуг</a>
           </div>
+          <ul class="footer__socail social">
+            <li>
+              <a href="#!" class="social--vk">Вконтакте</a>
+            </li>
+            <li>
+              <a href="#!" class="social--fb">Фейсбук</a>
+            </li>
+            <li>
+              <a href="#!" class="social--inst">Инстаграм</a>
+            </li>
+            <li>
+              <a href="#!" class="social--youtube">Ютуб</a>
+            </li>
+          </ul>
         </div>
       </div>
     </div>
-  </section>
-  <!-- tasks end -->
+  </footer>
+  <!-- footer end -->
 
-  <!-- photos start -->
-  <section class="photos">
-    <div class="container">
-      <h2 class="section__title photos__title">
-        <span>
-          Фотопродакшн
-        </span>
-      </h2>
-
-      <div class="photos__row-wrapper">
-
-        <div class="photos__row">
-       
-          <div class="photos__content">
-            <h3 class="photos__content-title">
-              МЫ СОЗДАЕМ <br>
-              <span>
-                РЕКЛАМНЫЕ ФОТОСЪЕМКИ
-              </span>
-            </h3>
-            <p class="photos__content-text">
-              Главная задача рекламной фотографии — вызвать непреодолимое желание купить ваш товар/услугу. Наши
-              фотографы знают, как этого добиться.
-            </p>
-          </div>
-
-          <div class="photos__gallery">
-            <div class="photos__gallery-min">
-              <div class="photos__gallery-item h50">
-                <img src="images/sec-photo-1.jpg" alt="">
-              </div>
-              <div class="photos__gallery-item h50">
-                <img src="images/sec-photo-2.jpg" alt="">
-              </div>
-            </div>
-            <div class="photos__gallery-max">
-              <div class="photos__gallery-item">
-                <img src="images/sec-photo-3.jpg" alt="">
-              </div>
-            </div>
-          </div>
-
-        </div>
-
-      </div>
-
-      <div class="photos__row-wrapper">
-     
-        <div class="photos__row reverse">
-
-          <div class="photos__content">
-            <h3 class="photos__content-title">
-             <span>ИМИДЖЕВАЯ СЪЕМКА</span> <br> 
-             ДЛЯ ВАШЕГО БРЕНДА
-            </h3>
-            <p class="photos__content-text">
-              Это визитная карточка вашего бренда. Имиджевые фотографии демонстрирует ваш стиль, вашу целостность, ваше чувство вкуса и вашу индивидуальность.
-            </p>
-          </div>
-
-          <div class="photos__gallery">
-            <div class="photos__gallery-min">
-              <div class="photos__gallery-item">
-                <img src="images/sec-photo-4.jpg" alt="">
-              </div>
-            </div>
-            <div class="photos__gallery-max">
-              <div class="photos__gallery-item">
-                <img src="images/sec-photo-5.jpg" alt="">
-              </div>
-            </div>
-          </div>
-
-        </div>
-
-      </div>
-
-      <div class="photos__row-wrapper">
-
-        <div class="photos__row">
-       
-          <div class="photos__content">
-            <h3 class="photos__content-title">
-              ФОТОГРАФИИ <br> 
-              ДЛЯ <span>ИНТЕРНЕТ-МАГАЗИНА</span> <br> ИЛИ  <span>КАТАЛОГА </span> 
-            </h3>
-            <p class="photos__content-text">
-              Главная задача рекламной фотографии  — вызвать непреодолимое желание купить ваш товар/услугу. Наши фотографы знают, как этого добиться.
-            </p>
-          </div>
-
-          <div class="photos__gallery">
-            <div class="photos__gallery-min">
-              <div class="photos__gallery-item h50">
-                <img src="images/sec-photo-6.jpg" alt="">
-              </div>
-              <div class="photos__gallery-item h50">
-                <img src="images/sec-photo-7.jpg" alt="">
-              </div>
-            </div>
-            <div class="photos__gallery-max">
-              <div class="photos__gallery-item">
-                <img src="images/sec-photo-8.jpg" alt="">
-              </div>
-            </div>
-          </div>
-
-        </div>
-
-      </div>
-
-      <div class="photos__row-wrapper">
-     
-        <div class="photos__row reverse">
-
-          <div class="photos__content">
-            <h3 class="photos__content-title">
-              <span>FOOD-СЪЕМКА</span>  <br> ДЛЯ ВАШЕГО ЗАВЕДЕНИЯ
-            </h3>
-            <p class="photos__content-text">
-              Блюда вашего кафе/ресторана должны пробуждать аппетит не только вживую, но и на экране смартфона. Без профессиональной фотографии это невозможно реализовать.
-            </p>
-          </div>
-
-          <div class="photos__gallery">
-            <div class="photos__gallery-min">
-              <div class="photos__gallery-item">
-                <img src="images/sec-photo-9.jpg" alt="">
-              </div>
-            </div>
-            <div class="photos__gallery-max">
-              <div class="photos__gallery-item">
-                <img src="images/sec-photo-10.jpg" alt="">
-              </div>
-            </div>
-          </div>
-
-        </div>
-
-      </div>
-
-      <div class="photos__row-wrapper">
-
-        <div class="photos__row">
-       
-          <div class="photos__content">
-            <h3 class="photos__content-title">
-              МЫ ДЕЛАЕМ <br> <span>ИНТЕРЬЕРНЫЕ ФОТОСЪЕМКИ</span> 
-            </h3>
-            <p class="photos__content-text">
-              Если потенциальный клиент, глядя на фото вашего интерьера, захотел оказаться внутри — это победа. И чтобы она состоялась, необходимо снять его правдоподобно и привлекательно.
-            </p>
-          </div>
-
-          <div class="photos__gallery">
-            <div class="photos__gallery-min">
-              <div class="photos__gallery-item h50">
-                <img src="images/sec-photo-11.jpg" alt="">
-              </div>
-              <div class="photos__gallery-item h50">
-                <img src="images/sec-photo-12.jpg" alt="">
-              </div>
-            </div>
-            <div class="photos__gallery-max">
-              <div class="photos__gallery-item">
-                <img src="images/sec-photo-13.jpg" alt="">
-              </div>
-            </div>
-          </div>
-
-        </div>
-
-      </div>
-
-      <div class="photos__row-wrapper">
-     
-        <div class="photos__row reverse">
-
-          <div class="photos__content">
-            <h3 class="photos__content-title">
-              СОЗДАДИМ ФОТОГРАФИИ <br> <span>ВАШЕГО ПРОИЗВОДСТВА </span>
-            </h3>
-            <p class="photos__content-text">
-              Готовая продукция — это, конечно, классно! Но зачастую важно показать процесс её изготовления: оборудование, этапы производства и мастеров, увлечённых работой.
-            </p>
-          </div>
-
-          <div class="photos__gallery">
-            <div class="photos__gallery-min">
-              <div class="photos__gallery-item">
-                <img src="images/sec-photo-14.jpg" alt="">
-              </div>
-            </div>
-            <div class="photos__gallery-max">
-              <div class="photos__gallery-item">
-                <img src="images/sec-photo-15.jpg" alt="">
-              </div>
-            </div>
-          </div>
-
-        </div>
-
-      </div>
-
-    </div>
-  </section>
-  <!-- photos end -->
-
-  <!-- order start -->
-  <div class="order">
-    <div class="order__container">
-      <h2 class="section__title">
-        <span>Рассчитайте стоимость</span>
-        <span>вашей фотосъемки</span>
-      </h2>
-      <div class="order__btn">
-        <button class="btn">Оставить заявку</button>
-      </div>
-    </div>
-  </div>
-  <!-- order end-->
-  
-  
-  <!-- ticker text start -->
-  <div class="ticker__text">
-    <div class="ticker-text__row">
-      <div class="ticker-text__list">
-        <div class="ticker-text__content-wrapper">
-          <div class="ticker-text__content">
-            photo & video production
-          </div>
-        </div>
-        <div class="ticker-text__content-wrapper">
-          <div class="ticker-text__content">
-            photo & video production
-          </div>
-        </div>
-        <div class="ticker-text__content-wrapper">
-          <div class="ticker-text__content">
-            photo & video production
-          </div>
-        </div>
-      </div>  
-    </div>
-    <div class="ticker-text__row right">
-      <div class="ticker-text__list">
-        <div class="ticker-text__content-wrapper">
-          <div class="ticker-text__content">
-            photo & video production
-          </div>
-        </div>
-        <div class="ticker-text__content-wrapper">
-          <div class="ticker-text__content">
-            photo & video production
-          </div>
-        </div>
-        <div class="ticker-text__content-wrapper">
-          <div class="ticker-text__content">
-            photo & video production
-          </div>
-        </div>
-      </div>  
-    </div>
-  </div>
-  
-  <!-- ticker text end -->
-  
-
-<script src="js/jquery.min.js"></script>
-  <script src="js/slick.min.js"></script>
-
+  <script src="js/jquery.min.js"></script>
+  <script src="js/jquery.fancybox.min.js"></script>
+  <script src="js/main.js"></script>
 </body>
 
 </html>
