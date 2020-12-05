@@ -17,7 +17,8 @@
   .btn {
     padding: 15px 30px;
   }
-  .header__logo {
+  .header__logo,
+  .footer__logo {
     width: 100px;
   }
   .header__wrapper {
@@ -76,6 +77,17 @@
     min-height: auto;
     line-height: 24px;
     margin-bottom: 10px;
+  }
+  .footer-top__inner {
+    flex-wrap: wrap;
+  }
+  .footer__map {
+    max-width: none;
+  }
+  .footer__contacts {
+    max-width: none;
+    margin-right: 0;
+    margin-bottom: 40px;
   }
 }
 
@@ -243,6 +255,39 @@
 .tasks__title,
 .photos__title {
   margin-bottom: 30px;
+}
+
+.footer-bottom__inner {
+  flex-wrap: wrap;
+  justify-content: center;
+  text-align: center;
+}
+
+
+
+.footer__logo {
+  width: 100%;
+  margin: 0;
+  margin-bottom: 15px;
+}
+
+.footer__privacy {
+  margin: 0;
+  margin-bottom: 15px;
+}
+
+.footer__privacy a {
+  margin: 0;
+  display: block;
+}
+
+.footer__socail {
+  width: 100%;
+  justify-content: center;
+
+}
+.footer__privacy a:not(:last-of-type) {
+  margin: 0;
 }
 
 }
