@@ -47,5 +47,24 @@ $(function () {
     }
     return false;
   });
-  
+
+  $('.scroll-top').click(function () {
+    $('html, body').animate({
+      scrollTop: 0
+    }, 500);
+
+    return false;
+  });
+
+  $(window).scroll(function () {
+    var positionScroll = $(window).scrollTop();
+
+
+    if (positionScroll > 300)
+      $('.scroll-top').fadeIn();
+    else
+      $('.scroll-top').fadeOut();
+
+  });
+
 });
